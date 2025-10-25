@@ -1,0 +1,437 @@
+:root {
+  --primary-gold: #ffe816dc;
+  --accent-emerald: #05b663;
+  --accent-sapphire: #0f52ba;
+  --dark-bg: #0a0a0a;
+  --dark-secondary: #1a1a1a;
+  --text-light: #e0e0e0;
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: var(--text-light);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Навігація */
+.navbar {
+  background: linear-gradient(
+    135deg,
+    var(--dark-bg) 0%,
+    var(--dark-secondary) 100%
+  );
+  border-bottom: 2px solid var(--primary-gold);
+  padding: 1.2rem 0;
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary-gold) !important;
+  letter-spacing: 2px;
+}
+
+.nav-link {
+  color: var(--text-light) !important;
+  margin: 0 1rem;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--primary-gold) !important;
+  transform: translateY(-2px);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-emerald);
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Хедер */
+.hero-section {
+  background: linear-gradient(135deg, var(--dark-secondary) 0%, #2a2a2a 100%);
+  padding: 5rem 0;
+  border-bottom: 3px solid var(--accent-sapphire);
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  background: linear-gradient(
+    135deg,
+    var(--primary-gold) 0%,
+    var(--accent-emerald) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Сайдбар */
+.sidebar {
+  background: var(--dark-secondary);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid var(--primary-gold);
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+}
+
+.sidebar h4 {
+  color: var(--primary-gold);
+  border-bottom: 2px solid var(--accent-emerald);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.category-item {
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  background: var(--dark-bg);
+  border-left: 3px solid var(--accent-sapphire);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.category-item:hover {
+  background: var(--dark-secondary);
+  border-left-color: var(--accent-emerald);
+  transform: translateX(10px);
+}
+
+/* Картки товарів */
+.product-card {
+  background: var(--dark-secondary);
+  border: 1px solid var(--primary-gold);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.4s;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4);
+  border-color: var(--accent-emerald);
+}
+
+.product-img-wrapper {
+  height: 250px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-img-wrapper i {
+  font-size: 5rem;
+  color: var(--primary-gold);
+  transition: all 0.3s;
+}
+
+.product-card:hover .product-img-wrapper i {
+  transform: scale(1.2) rotate(15deg);
+  color: var(--accent-emerald);
+}
+
+.product-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--accent-emerald);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.product-body {
+  padding: 1.5rem;
+}
+
+.product-price {
+  font-size: 1.8rem;
+  color: var(--primary-gold);
+  font-weight: bold;
+}
+
+.btn-luxury {
+  background: linear-gradient(
+    135deg,
+    var(--primary-gold) 0%,
+    var(--accent-emerald) 100%
+  );
+  border: none;
+  color: var(--dark-bg);
+  font-weight: bold;
+  padding: 0.7rem 2rem;
+  border-radius: 25px;
+  transition: all 0.3s;
+}
+
+.btn-luxury:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 20px rgba(212, 175, 55, 0.6);
+  color: white;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  background: var(--dark-secondary);
+  border: 1px solid var(--primary-gold);
+}
+
+.dropdown-item {
+  color: var(--text-light);
+  transition: all 0.3s;
+}
+
+.dropdown-item:hover {
+  background: var(--dark-bg);
+  color: var(--primary-gold);
+}
+
+/* Форма контактів */
+.contact-section {
+  background: linear-gradient(
+    135deg,
+    var(--dark-secondary) 0%,
+    var(--dark-bg) 100%
+  );
+  padding: 4rem 0;
+  border-top: 3px solid var(--accent-sapphire);
+}
+
+.contact-form {
+  background: var(--dark-secondary);
+  padding: 3rem;
+  border-radius: 20px;
+  border: 2px solid var(--primary-gold);
+  box-shadow: 0 10px 50px rgba(212, 175, 55, 0.3);
+}
+
+.form-control {
+  background: var(--dark-bg);
+  border: 1px solid var(--accent-sapphire);
+  color: var(--text-light);
+  border-radius: 10px;
+  padding: 0.8rem;
+}
+
+.form-control:focus {
+  background: var(--dark-bg);
+  border-color: var(--accent-emerald);
+  color: var(--text-light);
+  box-shadow: 0 0 15px rgba(80, 200, 120, 0.3);
+}
+
+.form-label {
+  color: var(--primary-gold);
+  font-weight: 500;
+}
+
+.contact-info {
+  background: var(--dark-bg);
+  padding: 2rem;
+  border-radius: 15px;
+  border-left: 4px solid var(--accent-emerald);
+}
+
+.contact-info i {
+  color: var(--primary-gold);
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+/* Footer */
+footer {
+  background: var(--dark-secondary);
+  border-top: 3px solid var(--primary-gold);
+  padding: 2rem 0;
+}
+
+.footer-icon {
+  color: var(--primary-gold);
+  font-size: 1.5rem;
+  margin: 0 1rem;
+  transition: all 0.3s;
+}
+
+.footer-icon:hover {
+  color: var(--accent-emerald);
+  transform: translateY(-5px);
+}
+
+/* Анімація іконок */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.icon-pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Alert */
+.alert-luxury {
+  background: linear-gradient(
+    135deg,
+    var(--dark-secondary) 0%,
+    var(--dark-bg) 100%
+  );
+  border: 2px solid var(--primary-gold);
+  color: var(--text-light);
+  border-radius: 15px;
+  padding: 1rem 1.5rem;
+}
+
+.alert-luxury i {
+  color: var(--accent-emerald);
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.alert-luxury strong {
+  color: var(--primary-gold);
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  background: var(--dark-secondary);
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  border: 1px solid var(--accent-sapphire);
+  margin-bottom: 2rem;
+}
+
+.breadcrumb-item a {
+  color: var(--primary-gold);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.breadcrumb-item a:hover {
+  color: var(--accent-emerald);
+}
+
+.breadcrumb-item.active {
+  color: var(--text-light);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: var(--accent-sapphire);
+  content: "›";
+}
+
+/* Accordion */
+.accordion-luxury {
+  margin-bottom: 1.5rem;
+}
+
+.accordion-luxury .accordion-item {
+  background: var(--dark-bg);
+  border: 1px solid var(--accent-sapphire);
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.accordion-luxury .accordion-button {
+  background: var(--dark-secondary);
+  color: var(--primary-gold);
+  border: none;
+  padding: 1rem;
+  font-weight: 500;
+}
+
+.accordion-luxury .accordion-button:not(.collapsed) {
+  background: var(--dark-bg);
+  color: var(--accent-emerald);
+  box-shadow: none;
+}
+
+.accordion-luxury .accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+  border-color: var(--primary-gold);
+}
+
+.accordion-luxury .accordion-button::after {
+  filter: invert(1);
+}
+
+.accordion-luxury .accordion-body {
+  background: var(--dark-bg);
+  color: var(--text-light);
+  padding: 1rem;
+}
+
+.accordion-luxury .accordion-button i {
+  margin-right: 0.5rem;
+}
+
+/* Modal */
+.modal-content {
+  background: var(--dark-secondary);
+  border: 2px solid var(--primary-gold);
+  border-radius: 15px;
+}
+
+.modal-header {
+  border-bottom: 1px solid var(--accent-sapphire);
+}
+
+.modal-title {
+  color: var(--primary-gold);
+}
+
+.modal-footer {
+  border-top: 1px solid var(--accent-sapphire);
+}
+
+.btn-secondary {
+  background: var(--dark-bg);
+  border: 1px solid var(--accent-sapphire);
+  color: var(--text-light);
+}
+
+.btn-secondary:hover {
+  background: var(--dark-secondary);
+  border-color: var(--accent-emerald);
+}
+
+.form-select {
+  background: var(--dark-bg);
+  border: 1px solid var(--accent-sapphire);
+  color: var(--text-light);
+  border-radius: 10px;
+}
+
+.form-select:focus {
+  background: var(--dark-bg);
+  border-color: var(--accent-emerald);
+  color: var(--text-light);
+  box-shadow: 0 0 15px rgba(80, 200, 120, 0.3);
+}
+
+.form-select option {
+  background: var(--dark-secondary);
+}

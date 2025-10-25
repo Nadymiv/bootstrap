@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LuxTime - Преміальні годинники</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style3.css" />
+  </head>
+  <body>
+    <!-- Навігація -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <i class="fas fa-crown"></i> LuxTime
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Головна</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Колекції
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="fas fa-gem"></i> Преміум</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="fas fa-star"></i> Класика</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="fas fa-bolt"></i> Спорт</a
+                  >
+                </li>
+                <li>
+                  <hr
+                    class="dropdown-divider"
+                    style="border-color: var(--primary-gold)"
+                  />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="fas fa-fire"></i> Новинки</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#catalog">Каталог</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Контакти</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="fas fa-shopping-cart"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <h1 class="hero-title">Розкіш на Вашому Зап'ясті</h1>
+            <p class="lead mt-4" style="color: var(--text-light)">
+              Ексклюзивна колекція швейцарських та японських годинників преміум
+              класу. Кожен годинник - це витвір мистецтва, створений для
+              справжніх цінувачів.
+            </p>
+            <button class="btn btn-luxury mt-3">
+              <i class="fas fa-crown"></i> Переглянути колекцію
+            </button>
+          </div>
+          <div class="col-lg-4 text-center">
+            <i
+              class="fas fa-clock icon-pulse"
+              style="font-size: 10rem; color: var(--primary-gold)"
+            ></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Alert про акцію -->
+    <div class="container mt-4">
+      <div class="alert alert-luxury alert-dismissible fade show" role="alert">
+        <i class="fas fa-gift"></i>
+        <strong>Спеціальна пропозиція!</strong> Безкоштовна доставка при
+        замовленні від 30,000 ₴. Знижка 15% на другу покупку!
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="alert"
+        ></button>
+      </div>
+    </div>
+
+    <!-- Основний контент -->
+    <div class="container my-5" id="catalog">
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="#home"><i class="fas fa-home"></i> Головна</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">Каталог</li>
+        </ol>
+      </nav>
+
+      <div class="row">
+        <!-- Сайдбар -->
+        <div class="col-lg-3">
+          <div class="sidebar">
+            <h4><i class="fas fa-filter"></i> Категорії</h4>
+
+            <!-- Accordion для категорій -->
+            <div class="accordion accordion-luxury" id="categoryAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseType"
+                  >
+                    <i class="fas fa-list"></i> Тип годинника
+                  </button>
+                </h2>
+                <div
+                  id="collapseType"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#categoryAccordion"
+                >
+                  <div class="accordion-body">
+                    <div class="category-item">
+                      <i
+                        class="fas fa-crown"
+                        style="color: var(--primary-gold)"
+                      ></i>
+                      Преміум (12)
+                    </div>
+                    <div class="category-item">
+                      <i
+                        class="fas fa-briefcase"
+                        style="color: var(--accent-sapphire)"
+                      ></i>
+                      Ділові (24)
+                    </div>
+                    <div class="category-item">
+                      <i
+                        class="fas fa-running"
+                        style="color: var(--accent-emerald)"
+                      ></i>
+                      Спортивні (18)
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseGender"
+                  >
+                    <i class="fas fa-venus-mars"></i> Для кого
+                  </button>
+                </h2>
+                <div
+                  id="collapseGender"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#categoryAccordion"
+                >
+                  <div class="accordion-body">
+                    <div class="category-item">
+                      <i class="fas fa-venus" style="color: #ff69b4"></i> Жіночі
+                      (15)
+                    </div>
+                    <div class="category-item">
+                      <i
+                        class="fas fa-mars"
+                        style="color: var(--accent-sapphire)"
+                      ></i>
+                      Чоловічі (31)
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h4 class="mt-4"><i class="fas fa-sliders-h"></i> Ціна</h4>
+            <input
+              type="range"
+              class="form-range"
+              min="0"
+              max="100000"
+              step="1000"
+            />
+            <div class="d-flex justify-content-between mt-2">
+              <small>0 ₴</small>
+              <small>100,000 ₴</small>
+            </div>
+
+            <h4 class="mt-4"><i class="fas fa-tags"></i> Бренди</h4>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" id="rolex" />
+              <label class="form-check-label" for="rolex">Rolex</label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" id="omega" />
+              <label class="form-check-label" for="omega">Omega</label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" id="seiko" />
+              <label class="form-check-label" for="seiko">Seiko</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Головний контент -->
+        <div class="col-lg-9">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 style="color: var(--primary-gold)">
+              <i class="fas fa-gem"></i> Наші колекції
+            </h2>
+            <select
+              class="form-select w-auto"
+              style="
+                background: var(--dark-secondary);
+                color: var(--text-light);
+                border-color: var(--accent-sapphire);
+              "
+            >
+              <option>Сортувати: Новинки</option>
+              <option>За ціною: зростання</option>
+              <option>За ціною: спадання</option>
+              <option>За популярністю</option>
+            </select>
+          </div>
+
+          <div class="row g-4">
+            <!-- Картка 1 -->
+            <div class="col-md-4">
+              <div class="product-card">
+                <div class="product-img-wrapper">
+                  <span class="product-badge" style="z-index: 10">NEW</span>
+                  <img
+                    class="product-img-wrapper"
+                    style="width: 100%"
+                    src="https://style-time.net/content/uploads/images/c-min.png"
+                    alt="Годинник 1"
+                  />
+                </div>
+                <div class="product-body">
+                  <h5 style="color: var(--accent-emerald)">
+                    Royal Crown Classic
+                  </h5>
+                  <p class="text-muted small">Швейцарський механізм</p>
+                  <div class="product-price">45,900 ₴</div>
+                  <button
+                    class="btn btn-luxury w-100 mt-3"
+                    data-bs-toggle="modal"
+                    data-bs-target="#orderModal"
+                  >
+                    <i class="fas fa-shopping-bag"></i> Замовити
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Картка 2 -->
+            <div class="col-md-4">
+              <div class="product-card">
+                <div class="product-img-wrapper">
+                  <span
+                    class="product-badge"
+                    style="background: var(--accent-sapphire); z-index: 10"
+                    >TOP</span
+                  >
+                  <img
+                    class="product-img-wrapper"
+                    style="width: 100%"
+                    src="https://sunlight.net/wiki/wp-content/uploads/2019/07/cropped-123123.jpg"
+                    alt="Годинник 2"
+                  />
+                </div>
+                <div class="product-body">
+                  <h5 style="color: var(--accent-emerald)">
+                    Sapphire Sport Pro
+                  </h5>
+                  <p class="text-muted small">Японський кварц</p>
+                  <div class="product-price">28,500 ₴</div>
+                  <button
+                    class="btn btn-luxury w-100 mt-3"
+                    data-bs-toggle="modal"
+                    data-bs-target="#orderModal"
+                  >
+                    <i class="fas fa-shopping-bag"></i> Замовити
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Картка 3 -->
+            <div class="col-md-4">
+              <div class="product-card">
+                <div class="product-img-wrapper">
+                  <span
+                    class="product-badge"
+                    style="background: var(--primary-gold); z-index: 10"
+                    >VIP</span
+                  >
+                  <img
+                    class="product-img-wrapper"
+                    style="width: 100%"
+                    src="https://watches-master.ua/uploads/files/CatalogProducts/images_15942/b7a12d.jpg"
+                    alt="Годинник 3"
+                  />
+                </div>
+                <div class="product-body">
+                  <h5 style="color: var(--accent-emerald)">
+                    Imperial Gold Edition
+                  </h5>
+                  <p class="text-muted small">Лімітована серія</p>
+                  <div class="product-price">89,900 ₴</div>
+                  <button
+                    class="btn btn-luxury w-100 mt-3"
+                    data-bs-toggle="modal"
+                    data-bs-target="#orderModal"
+                  >
+                    <i class="fas fa-shopping-bag"></i> Замовити
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Картка 4 -->
+            <div class="col-md-4">
+              <div class="product-card">
+                <div class="product-img-wrapper">
+                  <img
+                    class="product-img-wrapper"
+                    style="width: 100%"
+                    src="https://watches-master.ua/uploads/files/CatalogProducts/images_46785/2fe9ff.jpg"
+                    alt="Годинник 4"
+                  />
+                </div>
+                <div class="product-body">
+                  <h5 style="color: var(--accent-emerald)">
+                    Elegant Lady Pearl
+                  </h5>
+                  <p class="text-muted small">Інкрустація діамантами</p>
+                  <div class="product-price">52,400 ₴</div>
+                  <button
+                    class="btn btn-luxury w-100 mt-3"
+                    data-bs-toggle="modal"
+                    data-bs-target="#orderModal"
+                  >
+                    <i class="fas fa-shopping-bag"></i> Замовити
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Картка 5 -->
+            <div class="col-md-4">
+              <div class="product-card">
+                <div class="product-img-wrapper">
+                  <span
+                    class="product-badge"
+                    style="background: #ff4444; z-index: 10"
+                    >-25%</span
+                  >
+                  <img
+                    class="product-img-wrapper"
+                    style="width: 100%"
+                    src="https://timeshop.com.ua/images/thumbnails/1097/808/detailed/263/T137-410-11-041-00.jpg"
+                    alt="Годинник 5"
+                  />
+                </div>
+                <div class="product-body">
+                  <h5 style="color: var(--accent-emerald)">
+                    Business Executive
+                  </h5>
+                  <p class="text-muted small">Автоматичний підзавод</p>
+                  <div class="product-price">36,900 ₴</div>
+                  <button
+                    class="btn btn-luxury w-100 mt-3"
+                    data-bs-toggle="modal"
+                    data-bs-target="#orderModal"
+                  >
+                    <i class="fas fa-shopping-bag"></i> Замовити
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Картка 6 -->
+            <div class="col-md-4">
+              <div class="product-card">
+                <div class="product-img-wrapper">
+                  <img
+                    class="product-img-wrapper"
+                    style="width: 100%"
+                    src="https://style-time.net/content/uploads/images/c-min.png"
+                    alt="Годинник 6"
+                  />
+                </div>
+                <div class="product-body">
+                  <h5 style="color: var(--accent-emerald)">Vintage Heritage</h5>
+                  <p class="text-muted small">Ретро дизайн</p>
+                  <div class="product-price">41,200 ₴</div>
+                  <button
+                    class="btn btn-luxury w-100 mt-3"
+                    data-bs-toggle="modal"
+                    data-bs-target="#orderModal"
+                  >
+                    <i class="fas fa-shopping-bag"></i> Замовити
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Секція контактів -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="hero-title">Зв'яжіться з нами</h2>
+          <p class="lead" style="color: var(--text-light)">
+            Наші експерти завжди раді допомогти вам обрати ідеальний годинник
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="contact-form">
+              <h4 class="mb-4" style="color: var(--primary-gold)">
+                <i class="fas fa-envelope"></i> Надішліть повідомлення
+              </h4>
+              <form>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Ваше ім'я</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="Введіть ваше ім'я"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email адреса</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="example@email.com"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="phone" class="form-label">Телефон</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="phone"
+                    placeholder="+380 XX XXX XX XX"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="subject" class="form-label">Тема звернення</label>
+                  <select class="form-select" id="subject">
+                    <option>Консультація щодо покупки</option>
+                    <option>Сервісне обслуговування</option>
+                    <option>Партнерство</option>
+                    <option>Інше питання</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">Повідомлення</label>
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    rows="4"
+                    placeholder="Розкажіть про ваш запит..."
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-luxury w-100">
+                  <i class="fas fa-paper-plane"></i> Відправити
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="contact-info mb-4">
+              <h5 style="color: var(--primary-gold)">
+                <i class="fas fa-map-marker-alt"></i> Адреса
+              </h5>
+              <p>
+                м. Київ, вул. Хрещатик, 22<br />ТЦ "Luxury Plaza", 3-й поверх
+              </p>
+            </div>
+
+            <div class="contact-info mb-4">
+              <h5 style="color: var(--primary-gold)">
+                <i class="fas fa-phone"></i> Телефон
+              </h5>
+              <p>+380 44 123 45 67<br />+380 67 890 12 34 (WhatsApp)</p>
+            </div>
+
+            <div class="contact-info mb-4">
+              <h5 style="color: var(--primary-gold)">
+                <i class="fas fa-envelope"></i> Email
+              </h5>
+              <p>info@luxtime.ua<br />support@luxtime.ua</p>
+            </div>
+
+            <div class="contact-info">
+              <h5 style="color: var(--primary-gold)">
+                <i class="fas fa-clock"></i> Години роботи
+              </h5>
+              <p>Пн-Пт: 10:00 - 21:00<br />Сб-Нд: 11:00 - 20:00</p>
+            </div>
+
+            <div
+              class="mt-4 p-4 text-center"
+              style="
+                background: var(--dark-bg);
+                border-radius: 15px;
+                border: 2px solid var(--accent-emerald);
+              "
+            >
+              <h5 style="color: var(--accent-emerald)">
+                <i class="fas fa-gift"></i> Спеціальна пропозиція!
+              </h5>
+              <p class="mb-0">
+                Знижка 10% на першу покупку при реєстрації на сайті
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            <p class="mb-0" style="color: var(--text-light)">
+              © 2025 LuxTime. Всі права захищені.
+            </p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <a href="#" class="footer-icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="footer-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="footer-icon"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="footer-icon"><i class="fab fa-telegram"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
